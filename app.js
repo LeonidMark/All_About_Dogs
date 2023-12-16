@@ -1,7 +1,7 @@
 	//Getting the DOM-elements with ID
 const inputEL=document.querySelector('input');
 const formEl=document.querySelector('form')
-
+const showDogsEl=document.querySelector('#showDogs')
 
 	//Variables I need for now
 let numberDogs=0;
@@ -27,6 +27,8 @@ formEl.addEventListener('submit', async e=>{
 		}
 		console.log('Here are all the dogs you wanted to see',allDogs)
 
+		renderImages()
+
 		
 	}catch(err){
 		console.log('Something is not right',err)
@@ -34,6 +36,15 @@ formEl.addEventListener('submit', async e=>{
 
 	}
 })
+
+function renderImages (){
+
+	showDogsEl.innerHTML=allDogs.map(image=>{
+		return `<div class="container text-center my-5"> 
+		<img class="img-fluid" src="${image.message}" alt="dogImage" ">
+		</div>`
+	}).join("")
+}
 
 
 
