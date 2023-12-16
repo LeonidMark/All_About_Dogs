@@ -28,7 +28,11 @@ formEl.addEventListener('submit', async e=>{
 		console.log('Here are all the dogs you wanted to see',allDogs)
 
 		
-	}catch{}
+	}catch(err){
+		console.log('Something is not right',err)
+		throw err;
+
+	}
 })
 
 
