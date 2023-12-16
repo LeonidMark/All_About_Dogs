@@ -33,6 +33,7 @@ formEl.addEventListener('submit', async e=>{
 
 		hideDom(startContentEl)
 		renderImages()
+		showDom(showDogsEl)
 		showDom(getMoreBottomEl)
 		showDom(getMoreTopEl)
 
@@ -44,7 +45,12 @@ formEl.addEventListener('submit', async e=>{
 	}
 })
 getMoreTopEl.addEventListener('click', e => {
+	showMorePictures()
 
+})
+
+getMoreBottomEl.addEventListener('click', e => {
+	showMorePictures()
 
 })
 
@@ -64,6 +70,15 @@ function showDom(element){
 function hideDom(element){
 	element.classList.add('hide')
 }
+function showMorePictures() {
+	showDom(startContentEl)
+	hideDom(getMoreBottomEl)
+	hideDom(getMoreTopEl)
+	hideDom(showDogsEl)
+	allDogs.splice(0,allDogs.length)
+	numberDogs=0;
+	inputEL.value=""
 
+}
 
 
