@@ -3,6 +3,9 @@ const inputEL=document.querySelector('input');
 const formEl=document.querySelector('form')
 const showDogsEl=document.querySelector('#showDogs')
 const startContentEl=document.querySelector('#startContent')
+const getMoreTopEl=document.querySelector('#getMoreTop')
+const getMoreBottomEl=document.querySelector('#getMoreBottom')
+
 
 	//Variables I need for now
 let numberDogs=0;
@@ -30,6 +33,8 @@ formEl.addEventListener('submit', async e=>{
 
 		hideDom(startContentEl)
 		renderImages()
+		showDom(getMoreBottomEl)
+		showDom(getMoreTopEl)
 
 		
 	}catch(err){
@@ -38,6 +43,11 @@ formEl.addEventListener('submit', async e=>{
 
 	}
 })
+getMoreTopEl.addEventListener('click', e => {
+
+
+})
+
 
 function renderImages (){
 
