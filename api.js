@@ -7,9 +7,10 @@ const getData = async () =>{
 			throw new Error('The API is now avalible')
 		}
 		const data = await response.json()
-		console.log(data)
+		return data;
 	} catch(err){
-		alert('Something went wrong with the data')
+		console.error('Something went wrong with the data' ,err)
+		throw err;
 
 	}
 }
