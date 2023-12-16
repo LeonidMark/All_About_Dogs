@@ -2,6 +2,7 @@
 const inputEL=document.querySelector('input');
 const formEl=document.querySelector('form')
 const showDogsEl=document.querySelector('#showDogs')
+const startContentEl=document.querySelector('#startContent')
 
 	//Variables I need for now
 let numberDogs=0;
@@ -27,6 +28,7 @@ formEl.addEventListener('submit', async e=>{
 		}
 		console.log('Here are all the dogs you wanted to see',allDogs)
 
+		hideDom(startContentEl)
 		renderImages()
 
 		
@@ -46,6 +48,12 @@ function renderImages (){
 	}).join("")
 }
 
+function showDom(element){
+	element.classList.remove('hide')
+}
+function hideDom(element){
+	element.classList.add('hide')
+}
 
 
 
