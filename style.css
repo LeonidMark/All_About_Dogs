@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body{
+    color: aliceblue;
+}
+.hide{
+    display: none;
+}
